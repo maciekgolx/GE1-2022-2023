@@ -66,7 +66,7 @@ public class AITank : MonoBehaviour {
         float dot = Vector3.Dot(transform.forward,Player.normalized);
         float angle = Mathf.Acos(dot) * Mathf.Rad2Deg;
         
-        if (dot < 0.5)
+        if (dot < 0.10)
         {
             GameManager.Log("Tank is behind");       
         }
@@ -78,7 +78,7 @@ public class AITank : MonoBehaviour {
         // Put code here to calculate if the player is inside the field of view and in range
         // You can print stuff to the screen using:
 
-        if (angle < 0.5)
+        if (angle < 0.45)
         {
             GameManager.Log("Tank is in the fov");       
         }
