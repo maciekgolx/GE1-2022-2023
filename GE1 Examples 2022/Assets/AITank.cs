@@ -72,7 +72,7 @@ public class AITank : MonoBehaviour {
         }
         else
         {
-            GameManager.Log("Tank is in front"); 
+            GameManager.Log("Tank is in the front"); 
         }
         // Task 5
         // Put code here to calculate if the player is inside the field of view and in range
