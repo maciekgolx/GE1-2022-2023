@@ -60,7 +60,7 @@ public class AITank : MonoBehaviour
 
     int current = 0;
 
-    // Update is called once per frame
+    // Update is called once per frame 
     void Update()
     {
         Vector3 ps = transform.position;
