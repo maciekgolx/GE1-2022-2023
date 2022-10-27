@@ -42,9 +42,6 @@ public class AITank : MonoBehaviour
         }
     }
     void Awake () {
-        // Task 2
-        // Put code here to calculate the waypoints in a loop and 
-        // Add them to the waypoints List
         float theta = (Mathf.PI * 2.0f) / count;
         for(int i = 0 ; i < count ; i ++)
         {
