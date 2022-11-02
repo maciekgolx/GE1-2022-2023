@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyManager : MonoBehaviour {
+public class EnemyManagement : MonoBehaviour {
 
     public int targetCount = 5;
     public float radius = 10;
@@ -24,17 +24,13 @@ public class EnemyManager : MonoBehaviour {
                     , c.y
                 );
             }
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(1);
         }
     }
-
-	// Use this for initialization
 	void Start () {
         StartCoroutine(SpawnTanks());
 
     }
-
-	// Update is called once per frame
 	void Update () {
 
 	}

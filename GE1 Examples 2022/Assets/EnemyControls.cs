@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyController : MonoBehaviour {
+public class EnemyControls : MonoBehaviour {
 
     public void OnCollisionEnter(Collision collision)
     {
@@ -17,23 +17,23 @@ public class EnemyController : MonoBehaviour {
     {
         foreach (Transform t in this.GetComponentsInChildren<Transform>())
         {
-            Rigidbody rb = t.gameObject.GetComponent<Rigidbody>();
-            if (rb == null)
+            Rigidbody rt = t.gameObject.GetComponent<Rigidbody>();
+            if (rt == null)
             {
-                rb = t.gameObject.AddComponent<Rigidbody>();
+                rt = t.gameObject.AddComponent<Rigidbody>();
             }
-            rb.useGravity = true;
-            rb.isKinematic = false;
+            rt.useGravity = true;
+            rt.isKinematic = false;
             Vector3 v = new Vector3(
                 Random.Range(-5, 5)
                 , Random.Range(5, 10)
                 , Random.Range(-5, 5)
                 );
-            rb.velocity = v;
+            rt.velocity = v;
         }
         Invoke("Sink", 4);
         Destroy(this.gameObject, 7);
-        Destroy(transform.GetChild(0), 7); // Destroy the turret
+        Destroy(transform.GetChild(0), 7); 
     }
 
     void Sink()
