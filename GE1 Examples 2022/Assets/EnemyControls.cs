@@ -22,7 +22,7 @@ public class EnemyControls : MonoBehaviour {
             {
                 rt = t.gameObject.AddComponent<Rigidbody>();
             }
-            rt.useGravity = true;
+            rt.useGravity = true; 
             rt.isKinematic = false;
             Vector3 v = new Vector3(
                 Random.Range(-5, 5)
