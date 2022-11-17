@@ -12,7 +12,7 @@ public class TurretController : MonoBehaviour {
 
     Transform player;
 
-	// Use this for initialization
+	// Use this for initializations
 	void Start () {
         player = GameObject.FindGameObjectWithTag("Player").transform;
 	}
